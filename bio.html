@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bio Page</title>
+    <meta name="description" content="A simple bio page with links and a contact form." />
+    <link rel="stylesheet.css" href="stylesheet.css" />
+  </head>
+
+  <body>
+    <main class="page">
+      <section class="card" aria-label="Bio card">
+        <header class="header">
+          <img
+            class="avatar"
+            src="your_photo.jpg"
+            alt=""
+            width="110"
+            height="110"
+          />
+
+          <div class="title">
+            <h1>Jules Marinas</h1>
+            <p class="headline">UHMC •Kahului,Hawaii</p>
+
+            <ul class="meta">
+              <li> Kahului, HI</li>
+              <li>UH Maui College</li>
+              <li>marinasj@hawaii.edu</li>
+            </ul>
+          </div>
+        </header>
+
+        <p class="about">
+          Hi! I’m <strong>Jules Marinas</strong>. I’m interested in improving customer service. I’m currently
+          working on creating ways to help give customers a better customer satisfaction. This page has my links and an easy way to contact me.
+        </p>
+
+        <section class="links" aria-label="Links">
+          <a class="btn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="#" target="_blank" rel="noreferrer">Portfolio</a>
+          <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </section>
+
+        <hr class="divider" />
+
+        <section aria-label="Contact form">
+          <h2>Contact Me</h2>
+
+          <form class="form" action="#" method="post">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required minlength="2" />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+
+            <label>
+              Message
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Write your message..."
+                required
+                minlength="10"
+              ></textarea>
+            </label>
+
+            <button class="submit" type="submit">Send</button>
+            <p class="hint">This form is UI-only unless you connect it to a backend or form service.</p>
+          </form>
+        </section>
+
+        <footer class="footer">
+          <small>© <span id="year"></span> Your Name</small>
+        </footer>
+      </section>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
+
+
