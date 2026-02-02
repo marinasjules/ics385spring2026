@@ -1,0 +1,114 @@
+/* Basic layout (keep or merge with your existing Udemy styles) */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  text-align: center;
+}
+
+.topbar {
+  padding: 16px;
+}
+
+#level-title {
+  margin: 0 0 6px;
+}
+
+#status {
+  margin: 0 0 12px;
+  opacity: 0.9;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 8px 14px;
+  border: 1px solid #222;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: transparent;
+}
+
+.container {
+  margin-top: 12px;
+  display: grid;
+  justify-content: center;
+  gap: 14px;
+}
+
+.row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.btn {
+  width: 160px;
+  height: 160px;
+  border-radius: 18px;
+  border: 8px solid #111;
+  cursor: pointer;
+}
+
+.green { background: #00a74a; }
+.red { background: #9f0f17; }
+.yellow { background: #cca707; }
+.blue { background: #094a8f; }
+
+.pressed {
+  transform: scale(0.98);
+  filter: brightness(1.2);
+}
+
+.flash {
+  filter: brightness(1.6);
+}
+
+.game-over {
+  background: #5b0b0b;
+}
+
+/* Modal */
+.modal.hidden { display: none; }
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.modal-card {
+  width: min(560px, 92vw);
+  background: #fff;
+  color: #111;
+  padding: 18px;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.modal-card h2 {
+  margin-top: 0;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}

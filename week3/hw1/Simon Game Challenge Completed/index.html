@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simon Game (Beginner Friendly)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <h1 id="level-title">Simon — Welcome</h1>
+    <p id="status">Click Start to begin the tutorial (Level 0).</p>
+
+    <div class="controls">
+      <button id="startBtn">Start</button>
+      <button id="restartBtn" disabled>Restart</button>
+      <button id="hintBtn" disabled>Hint</button>
+
+      <label class="toggle">
+        <input type="checkbox" id="strictToggle" />
+        Strict
+      </label>
+
+      <label class="select">
+        Speed
+        <select id="speedSelect">
+          <option value="easy">Easy</option>
+          <option value="normal" selected>Normal</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="row">
+      <div id="green" class="btn green" data-key="G"></div>
+      <div id="red" class="btn red" data-key="R"></div>
+    </div>
+    <div class="row">
+      <div id="yellow" class="btn yellow" data-key="Y"></div>
+      <div id="blue" class="btn blue" data-key="B"></div>
+    </div>
+  </main>
+
+  <!-- Beginner Help Modal -->
+  <div id="helpModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <h2>How to Play</h2>
+      <ul>
+        <li>Watch the color pattern.</li>
+        <li>Repeat it by clicking the buttons in the same order.</li>
+        <li>Each level adds one new step.</li>
+        <li><b>Tip:</b> You can also use keys: R, B, G, Y.</li>
+        <li><b>Hint:</b> Replays the pattern once per level.</li>
+      </ul>
+
+      <div class="modal-actions">
+        <button id="modalStartTutorialBtn">Start Tutorial (Level 0)</button>
+        <button id="modalSkipBtn" class="secondary">Skip Tutorial → Level 1</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Keep your existing jQuery include if you already have it -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
